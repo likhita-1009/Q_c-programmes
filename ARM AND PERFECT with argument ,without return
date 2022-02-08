@@ -1,0 +1,52 @@
+//with argument and without return
+
+#include<stdio.h>
+#include<math.h>
+int arm(int a)
+{
+	int l=a;
+	int b=a,i;
+	for(i=0;b>0;i++){
+		b=b/10;
+	}
+    int c=a,d,j,e=0,f;
+    for(j=1;j<=i;j++){
+    	f=c%10;
+    	d=pow(f,i);
+    	e=e+d;
+    	c=c/10;
+	}
+	//printf("%d",e);
+	if(a==e){
+		printf("%d is Armstrong & ",e);
+	}else if (b!=a){
+		printf("%d is not armstrong & ",e);
+	}
+
+}
+int per(int y){
+	int i,x=0;
+	for(i=1;i<y;i++){
+		if(y%i==0){
+			x=x+i;
+		}
+	}
+	if(y==x){
+		printf("perfect no");
+	}
+	else{
+		printf("not perfect no");
+	}
+}
+int main()
+{
+	int a,b;
+	scanf("%d",&a);
+	arm(a);
+    printf("\n");
+	per(a);
+	
+	return 0;
+	
+	
+}
