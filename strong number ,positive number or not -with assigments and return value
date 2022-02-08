@@ -1,0 +1,41 @@
+//with assignments and return values.
+#include<stdio.h>
+int str(int a);
+int pos(int b);
+int main()
+{
+	int a;
+	scanf("%d",&a);
+	str(a);
+	int b=str(a);
+	if(a==b){
+     	printf("it is strong number");
+	 }else {
+	 	printf("it is not strong number");
+	 }
+	printf("\n");
+	pos(a);
+	 
+}
+int str(int a)
+{
+    int i,j,b,c=0;
+	for(i=a;a!=0;a=a/10){
+		b=a%10;
+		for(j=b-1;j>0;j--){
+			b=b*j;
+		}
+		c=c+b; 
+    }
+    
+    return c;
+     
+}
+int pos(int b)
+{
+	if(b>=0){
+		printf("positive");
+	}else{
+		printf("negative");
+	}
+}*/
