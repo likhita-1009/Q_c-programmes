@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int n,m;
+	printf("Give number of rows= ");
+    scanf("%d",&n);
+    printf("Give number of columns= ");
+	scanf("%d",&m);
+	int a[n][m];
+	int i=0,j=0;
+	printf("Give number in respective places\n");
+    for(i=0;i<n;i++)
+    {
+    	for(j=0;j<m;j++){
+    		printf("a[%d][%d]=",i,j);
+    		scanf("%d",&a[i][j]);
+		}
+	}
+	
+	printf("The arrangement is ");
+	for(i=0;i<=n-1;i++){
+		printf("\n\n");
+		for(j=0;j<=m-1;j++){
+			printf("   %d   ",a[i][j]);
+		}
+        }
+}
